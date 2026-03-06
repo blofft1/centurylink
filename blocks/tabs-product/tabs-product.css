@@ -76,11 +76,11 @@
   display: none;
 }
 
-/* Two-column layout inside tab panels */
+/* Tab panel content layout */
 .tabs-product .tabs-product-panel > div {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-m);
 }
 
 .tabs-product .tabs-product-panel h2 {
@@ -90,16 +90,17 @@
 
 .tabs-product .tabs-product-panel p {
   line-height: 1.5;
+  margin: 0 0 var(--spacing-s);
 }
 
-/* CTA links inside tabs */
-.tabs-product .tabs-product-panel a:not([href=""]) {
+/* Links in tabs */
+.tabs-product .tabs-product-panel a {
   color: var(--color-brand-blue);
 }
 
 /* Images in tab panels */
 .tabs-product .tabs-product-panel img {
-  max-width: 100%;
+  max-width: 280px;
   height: auto;
   border-radius: 0;
 }
@@ -117,12 +118,27 @@
     padding: 10px 24px;
   }
 
+  /* 2-column grid: text left, image+caption right */
   .tabs-product .tabs-product-panel > div {
-    flex-direction: row;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: auto;
+    gap: var(--spacing-m) var(--spacing-xxl);
+    align-items: start;
   }
 
-  .tabs-product .tabs-product-panel > div > * {
-    flex: 1;
+  /* First 3 items (h2, description, CTA) in left column */
+  .tabs-product .tabs-product-panel > div > *:nth-child(-n+3) {
+    grid-column: 1;
+  }
+
+  /* Items 4+ (image, captions) in right column */
+  .tabs-product .tabs-product-panel > div > *:nth-child(n+4) {
+    grid-column: 2;
+  }
+
+  /* Image spans all right-column rows */
+  .tabs-product .tabs-product-panel > div > *:nth-child(4) {
+    grid-row: 1 / span 2;
   }
 }

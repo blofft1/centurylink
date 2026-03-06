@@ -1,6 +1,10 @@
 footer {
+  border-top: 1px solid var(--color-gray-200);
+
   a {
     text-decoration: none;
+    color: var(--color-brand-blue);
+    font-size: var(--body-font-size-s);
   }
 
   .footer-content {
@@ -9,21 +13,43 @@ footer {
     font-size: 14px;
   }
 
-  .section-legal ul {
-    margin: 0;
-    padding: 0;
+  .section .default-content {
+    max-width: var(--grid-container-width);
+    margin: 0 auto;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .section .default-content h3 {
+    font-size: var(--body-font-size-s);
+    font-weight: 700;
+    color: var(--color-text);
+    margin: 0 0 var(--spacing-s);
+    line-height: 1.4;
+  }
+
+  .section .default-content ul {
     list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-xl);
+  }
+
+  .section .default-content li {
+    margin: 0 0 var(--spacing-xs);
+  }
+
+  .section-legal {
+    border-top: 1px solid var(--color-gray-200);
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
   }
 
   .section-copyright p {
     margin: 0;
-  }
-
-  .section {
-    .default-content {
-      max-width: initial;
-      margin: initial;
-    }
+    font-size: var(--body-font-size-xs);
   }
 }
 
@@ -31,16 +57,30 @@ footer {
   footer {
     margin: 0;
 
+    .section .default-content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0 var(--spacing-xl);
+    }
+
+    .section .default-content h3 {
+      grid-column: auto;
+    }
+
+    .section .default-content ul {
+      grid-column: auto;
+    }
+
     .section-legal {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
-      margin-bottom: 24px;
+      padding: var(--spacing-l) 0;
 
       ul {
         display: flex;
         justify-content: end;
-        gap: var(--spacing-xl);
+        flex-wrap: wrap;
+        gap: var(--spacing-l);
+        max-width: var(--grid-container-width);
+        margin: 0 auto;
       }
 
       li {
@@ -49,9 +89,11 @@ footer {
     }
 
     .section-copyright {
+      max-width: var(--grid-container-width);
+      margin: 0 auto;
       display: flex;
       justify-content: end;
-      gap: var(--spacing-xl);
+      padding-bottom: var(--spacing-l);
     }
   }
 }

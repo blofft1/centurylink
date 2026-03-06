@@ -283,6 +283,23 @@ main > .section.green {
   background-color: var(--color-gray-section);
 }
 
+/* CTA link styling - sole links in main content paragraphs */
+main .default-content p > a:only-child {
+  display: inline-block;
+  padding: var(--button-padding);
+  background: var(--color-mint-green);
+  color: var(--color-dark);
+  text-decoration: none;
+  border: 2px solid var(--color-mint-green);
+  font-weight: var(--button-font-weight);
+  transition: var(--button-transition);
+}
+
+main .default-content p > a:only-child:hover {
+  background: transparent;
+  color: var(--color-dark);
+}
+
 main {
   ul,
   ol {
@@ -337,6 +354,56 @@ button {
 img {
   width: 100%;
   height: auto;
+}
+
+/* Inline images in paragraphs should not stretch full width */
+.default-content p > img:only-child {
+  width: auto;
+  max-height: 48px;
+}
+
+/* Block-level images (inside their own paragraph) stay full width */
+.default-content p > picture,
+.default-content p > picture img {
+  width: 100%;
+  height: auto;
+}
+
+/* Constrain chat bubble icon */
+.default-content img[alt="CTL Live chat"] {
+  width: auto;
+  max-height: 40px;
+  vertical-align: middle;
+  margin-left: var(--spacing-s);
+}
+
+/* Hide tracking/utility images and their parent paragraphs */
+.default-content p:has(> img[alt="dot image pixel"]),
+.default-content p:has(> img[alt="Live chat"]) {
+  display: none;
+}
+
+/* Hide empty paragraphs */
+.default-content p:empty {
+  display: none;
+}
+
+/* Content images that are contextual icons */
+.default-content img[alt="5-star rating"] {
+  width: auto;
+  max-height: 24px;
+}
+
+.default-content img[alt="headphones"],
+.default-content img[alt="devices"] {
+  width: auto;
+  max-width: 200px;
+  max-height: 120px;
+}
+
+/* Constrain content images to readable width */
+.default-content img[alt="yoga mobile"] {
+  max-width: 400px;
 }
 
 svg {
