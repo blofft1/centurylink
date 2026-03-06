@@ -7,13 +7,13 @@
 
 .hero-speed {
   position: relative;
-  padding: 60px 24px 40px;
-  min-height: 360px;
+  padding: 48px 24px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
   background-color: #1a2b4a;
+  border-top: 4px solid var(--color-brand-blue);
 }
 
 .hero-speed > div:first-child {
@@ -40,19 +40,15 @@
   color: var(--color-light);
 }
 
-.hero-speed p,
 .hero-speed > div:first-child > div:last-child {
-  color: var(--color-light);
   font-size: var(--body-font-size-l);
   max-width: 500px;
 }
 
+/* no-image variant: light bg, brand blue heading, dark text */
 .hero-speed.no-image {
   background-color: var(--color-light);
-}
-
-.hero-speed.no-image * {
-  color: var(--color-text);
+  padding: 48px 24px;
 }
 
 .hero-speed.no-image h1,
@@ -60,6 +56,22 @@
   color: var(--color-brand-blue);
 }
 
+.hero-speed.no-image p,
+.hero-speed.no-image div {
+  color: var(--color-text);
+}
+
+.hero-speed.no-image > div:first-child > div:last-child {
+  color: var(--color-gray-600);
+  font-size: var(--body-font-size-xl);
+  margin-top: var(--spacing-s);
+}
+
+.hero-speed.no-image a {
+  color: var(--color-brand-blue);
+}
+
+/* image variant styles */
 .hero-speed picture {
   position: absolute;
   z-index: 0;
@@ -72,7 +84,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to right, rgb(0 30 80 / 85%) 30%, rgb(0 30 80 / 40%) 70%, transparent);
+  background: linear-gradient(
+    to right,
+    rgb(0 30 80 / 85%) 30%,
+    rgb(0 30 80 / 40%) 70%,
+    transparent
+  );
 }
 
 .hero-speed img {
@@ -94,15 +111,21 @@
 
 @media (width >= 600px) {
   .hero-speed {
-    padding: 60px 32px;
-    min-height: 400px;
+    padding: 56px 32px 48px;
+  }
+
+  .hero-speed.no-image {
+    padding: 56px 32px;
   }
 }
 
 @media (width >= 900px) {
   .hero-speed {
-    padding: 80px 32px;
-    min-height: 450px;
+    padding: 64px 32px 56px;
+  }
+
+  .hero-speed.no-image {
+    padding: 64px 32px;
   }
 
   .hero-speed h1 {

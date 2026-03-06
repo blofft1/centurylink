@@ -1,15 +1,26 @@
-/* Columns Compare Block - CenturyLink CTA / comparison section */
+/* Columns Compare Block - CenturyLink CTA strip / comparison */
+
+.columns-compare-container .columns-compare-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.columns-compare-container {
+  padding: 0;
+}
 
 .columns-compare {
-  max-width: var(--grid-container-width);
-  margin: 0 auto;
+  background-color: var(--color-gray-100);
   text-align: center;
+  padding: 24px;
 }
 
 .columns-compare > div {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-l);
+  gap: var(--spacing-m);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .columns-compare > div > div {
@@ -36,6 +47,13 @@
 .columns-compare p {
   line-height: 1.5;
   font-size: var(--body-font-size-l);
+  color: var(--color-brand-blue);
+  margin: 0;
+}
+
+.columns-compare p:last-child {
+  font-size: var(--body-font-size-s);
+  color: var(--color-gray-600);
 }
 
 .columns-compare a {
@@ -46,15 +64,12 @@
   .columns-compare > div {
     align-items: center;
     flex-direction: row;
+    justify-content: center;
     gap: var(--spacing-xxl);
   }
 
   .columns-compare > div > div {
-    flex: 1;
+    flex: none;
     order: unset;
-  }
-
-  .columns-compare {
-    text-align: left;
   }
 }
