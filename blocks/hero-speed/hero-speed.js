@@ -1,9 +1,30 @@
+/**
+ * Find the first image element in a container — handles both
+ * DA-authored <picture> elements and bare <img> tags (from copy-paste).
+ * Returns the <picture> or wraps a bare <img> in a new <picture>.
+ */
+function getImageElement(container) {
+  const pic = container.querySelector('picture');
+  if (pic) return pic;
+
+  // Bare <img> fallback (e.g. pasted from external source)
+  const img = container.querySelector('img');
+  if (img) {
+    const picture = document.createElement('picture');
+    img.before(picture);
+    picture.append(img);
+    return picture;
+  }
+
+  return null;
+}
+
 export default function decorate(block) {
   const rows = [...block.children];
 
   // Row 1: Background image
   const bgRow = rows[0];
-  const bgPicture = bgRow?.querySelector('picture');
+  const bgPicture = getImageElement(bgRow);
   if (bgPicture) {
     bgPicture.classList.add('hero-speed-bg');
     block.prepend(bgPicture);
@@ -37,7 +58,7 @@ export default function decorate(block) {
       // Prepend the corresponding image from the images row
       const imgCell = imageCells[i];
       if (imgCell) {
-        const pic = imgCell.querySelector('picture');
+        const pic = getImageElement(imgCell);
         if (pic) card.prepend(pic);
       }
 
