@@ -1,0 +1,38 @@
+{
+  "variantName": "hero-speed",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-03-06T01:16:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.centurylink.com/home.html",
+    "originPage": "CenturyLink homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "speed-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background-image + heading + subheading",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "ISP homepage heroes",
+      "speed/performance focused landing pages",
+      "telecom product pages"
+    ],
+    "notSuitableFor": [
+      "blog post headers",
+      "minimal text-only heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-06T01:16:00.000Z"
+  }
+}

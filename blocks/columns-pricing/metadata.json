@@ -1,0 +1,38 @@
+{
+  "variantName": "columns-pricing",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-03-06T01:16:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.centurylink.com/home.html",
+    "originPage": "CenturyLink homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "pricing-comparison",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "title + feature-list + price + fine-print",
+    "buttonCount": 0,
+    "imageCount": 2
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "pricing comparison cards",
+      "plan tier comparisons",
+      "product feature comparisons"
+    ],
+    "notSuitableFor": [
+      "image-heavy layouts",
+      "simple text side-by-side"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-06T01:16:00.000Z"
+  }
+}

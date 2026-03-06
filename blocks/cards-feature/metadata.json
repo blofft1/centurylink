@@ -1,0 +1,38 @@
+{
+  "variantName": "cards-feature",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-03-06T01:16:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.centurylink.com/home.html",
+    "originPage": "CenturyLink homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "feature-icons",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "icon-image + label-text",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature icon grids",
+      "benefit highlights with icons",
+      "service feature lists"
+    ],
+    "notSuitableFor": [
+      "photo-heavy card grids",
+      "article listing cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-06T01:16:00.000Z"
+  }
+}

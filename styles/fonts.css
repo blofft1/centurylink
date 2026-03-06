@@ -1,0 +1,46 @@
+/*
+ * CenturyLink Font Loading
+ *
+ * Primary font: MaisonNeue (CenturyLink/Lumen proprietary)
+ * The site uses MaisonNeue-book for body text and MaisonNeue for headings.
+ * Since MaisonNeue is a licensed font (Milieu Grotesque), production deployments
+ * should use properly licensed font files placed in /styles/fonts/.
+ *
+ * For development, we fall back to system sans-serif fonts.
+ */
+
+/* MaisonNeue Book - Body text */
+@font-face {
+  font-family: MaisonNeue;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/styles/fonts/MaisonNeue-Book.woff2") format("woff2");
+}
+
+/* MaisonNeue Medium */
+@font-face {
+  font-family: MaisonNeue;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/styles/fonts/MaisonNeue-Medium.woff2") format("woff2");
+}
+
+/* MaisonNeue Bold */
+@font-face {
+  font-family: MaisonNeue;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/styles/fonts/MaisonNeue-Bold.woff2") format("woff2");
+}
+
+/* MaisonNeue ExtraBold */
+@font-face {
+  font-family: MaisonNeue;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("/styles/fonts/MaisonNeue-ExtraBold.woff2") format("woff2");
+}

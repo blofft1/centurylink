@@ -1,0 +1,60 @@
+/* Columns Pricing Block - CenturyLink pricing comparison layout */
+
+.columns-pricing {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+}
+
+.columns-pricing > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.columns-pricing > div > div {
+  order: 1;
+}
+
+.columns-pricing > div > .columns-pricing-img-col {
+  order: 0;
+}
+
+.columns-pricing img {
+  width: 100%;
+  height: auto;
+}
+
+.columns-pricing > div > .columns-pricing-img-col img {
+  display: block;
+}
+
+.columns-pricing h2 {
+  color: var(--color-brand-blue);
+  margin-top: 0;
+}
+
+.columns-pricing p {
+  line-height: 1.5;
+}
+
+.columns-pricing sup {
+  font-size: 0.6em;
+  vertical-align: super;
+}
+
+.columns-pricing a {
+  color: var(--color-brand-blue);
+}
+
+@media (width >= 900px) {
+  .columns-pricing > div {
+    align-items: center;
+    flex-direction: row;
+    gap: var(--spacing-xxl);
+  }
+
+  .columns-pricing > div > div {
+    flex: 1;
+    order: unset;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-promo",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-03-06T01:16:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.centurylink.com/home.html",
+    "originPage": "CenturyLink homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "promotional",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + CTA + image",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "promotional sections with text and image",
+      "referral program callouts",
+      "moving/transfer service sections",
+      "content with image beside text"
+    ],
+    "notSuitableFor": [
+      "data-heavy comparisons",
+      "icon grids"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-06T01:16:00.000Z"
+  }
+}

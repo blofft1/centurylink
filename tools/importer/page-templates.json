@@ -1,0 +1,155 @@
+{
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://www.centurylink.com/home.html"
+      ],
+      "description": "CenturyLink main homepage with hero, service offerings, promotions, and support links",
+      "blocks": [
+        {
+          "name": "hero-speed",
+          "instances": [
+            ".cmp-container--bg-994124446"
+          ]
+        },
+        {
+          "name": "columns-pricing",
+          "instances": [
+            "#container-0520f0944c .aem-Grid > .container:first-child, #container-0520f0944c .aem-Grid > .container:nth-child(2)"
+          ]
+        },
+        {
+          "name": "tabs-product",
+          "instances": [
+            ".cmp-tabs__tablist"
+          ]
+        },
+        {
+          "name": "cards-feature",
+          "instances": [
+            "#experiencefragment-ecaa09639e",
+            ".cmp-experiencefragment--home---fiber-icons .cmp-container",
+            "#experiencefragment-premium-wifi .cmp-container"
+          ]
+        },
+        {
+          "name": "columns-compare",
+          "instances": [
+            "#container-c49e1f9729"
+          ]
+        },
+        {
+          "name": "columns-promo",
+          "instances": [
+            "#container-06730e7ef7",
+            "#container-2e3e345215"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-1",
+          "name": "Hero",
+          "selector": ".cmp-container--bg-994124446",
+          "style": null,
+          "blocks": [
+            "hero-speed",
+            "columns-pricing"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-2",
+          "name": "CTA Bar",
+          "selector": "#container-43140bf83a",
+          "style": null,
+          "blocks": [],
+          "defaultContent": [
+            "#container-43140bf83a .cmp-text"
+          ]
+        },
+        {
+          "id": "section-3",
+          "name": "Reliable Internet",
+          "selector": "#container-ed7e245a26",
+          "style": null,
+          "blocks": [
+            "tabs-product",
+            "cards-feature"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-4",
+          "name": "Fiber Benefits",
+          "selector": "#container-c0bbedf147",
+          "style": null,
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": [
+            "#container-c0bbedf147 h2",
+            "#container-c0bbedf147 .cmp-text"
+          ]
+        },
+        {
+          "id": "section-5",
+          "name": "Self-Service",
+          "selector": "#container-e3fcad6744",
+          "style": "grey",
+          "blocks": [],
+          "defaultContent": [
+            "#container-e3fcad6744 .cmp-text"
+          ]
+        },
+        {
+          "id": "section-6",
+          "name": "Speed Comparison",
+          "selector": "#container-c49e1f9729",
+          "style": null,
+          "blocks": [
+            "columns-compare"
+          ],
+          "defaultContent": [
+            "#container-c49e1f9729 h2",
+            "#container-c49e1f9729 .cmp-text"
+          ]
+        },
+        {
+          "id": "section-7",
+          "name": "Premium WiFi",
+          "selector": "#container-b15a154183",
+          "style": "green",
+          "blocks": [
+            "cards-feature"
+          ],
+          "defaultContent": [
+            "#container-b15a154183 h2",
+            "#container-b15a154183 .cmp-text"
+          ]
+        },
+        {
+          "id": "section-8",
+          "name": "Referral Program",
+          "selector": "#container-06730e7ef7",
+          "style": null,
+          "blocks": [
+            "columns-promo"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "section-9",
+          "name": "Moving",
+          "selector": "#container-2e3e345215",
+          "style": null,
+          "blocks": [
+            "columns-promo"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

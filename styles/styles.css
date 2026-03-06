@@ -1,57 +1,8 @@
+/* fallback font - size-adjusted to approximate MaisonNeue metrics */
 @font-face {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/styles/fonts/montserrat.woff2") format("woff2");
-  unicode-range:
-    U+0000-00FF,
-    U+0131,
-    U+0152-0153,
-    U+02BB-02BC,
-    U+02C6,
-    U+02DA,
-    U+02DC,
-    U+0304,
-    U+0308,
-    U+0329,
-    U+2000-206F,
-    U+20AC,
-    U+2122,
-    U+2191,
-    U+2193,
-    U+2212,
-    U+2215,
-    U+FEFF,
-    U+FFFD;
-}
-
-@font-face {
-  font-family: Montserrat;
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("/styles/fonts/montserrat-italic.woff2") format("woff2");
-  unicode-range:
-    U+0000-00FF,
-    U+0131,
-    U+0152-0153,
-    U+02BB-02BC,
-    U+02C6,
-    U+02DA,
-    U+02DC,
-    U+0304,
-    U+0308,
-    U+0329,
-    U+2000-206F,
-    U+20AC,
-    U+2122,
-    U+2191,
-    U+2193,
-    U+2212,
-    U+2215,
-    U+FEFF,
-    U+FFFD;
+  font-family: maisonneue-fallback;
+  size-adjust: 100%;
+  src: local("Arial"), local("Helvetica Neue"), local("Helvetica");
 }
 
 :root {
@@ -69,7 +20,13 @@
   --spacing-xs: 4px;
 
   /* color schemes */
-  color-scheme: light dark;
+  color-scheme: light;
+
+  /* CenturyLink brand colors */
+  --color-brand-blue: #0047bb;
+  --color-brand-blue-light: #0075c9;
+  --color-mint-green: #48d597;
+  --color-gray-section: #eee;
 
   /* color tokens */
   --color-gray-100: #f1f1f1;
@@ -81,102 +38,30 @@
   --color-gray-700: #494949;
   --color-gray-800: #313131;
   --color-gray-900: #1b1b1b;
-  --color-green-100: #e1f5e3;
-  --color-green-200: #a3e1a8;
-  --color-green-300: #60cb6a;
-  --color-green-400: #24b032;
-  --color-green-500: #1e9029;
-  --color-green-600: #187220;
-  --color-green-700: #115418;
-  --color-green-800: #0c3910;
-  --color-green-900: #072009;
-  --color-teal-100: #e4f3f5;
-  --color-teal-200: #acdbdf;
-  --color-teal-300: #71c1c9;
-  --color-teal-400: #36a7b3;
-  --color-teal-500: #108a96;
-  --color-teal-600: #0d6d77;
-  --color-teal-700: #0a5158;
-  --color-teal-800: #06363b;
-  --color-teal-900: #041e21;
-  --color-blue-100: #eaf2ff;
-  --color-blue-200: #b9d4ff;
-  --color-blue-300: #88b6ff;
-  --color-blue-400: #5898ff;
-  --color-blue-500: #2176ff;
-  --color-blue-600: #0058e4;
-  --color-blue-700: #0041a9;
-  --color-blue-800: #002c74;
-  --color-blue-900: #001942;
-  --color-purple-100: #f4edfb;
-  --color-purple-200: #dfcbf2;
-  --color-purple-300: #c9a7ea;
-  --color-purple-400: #b385e1;
-  --color-purple-500: #9d60d8;
-  --color-purple-600: #843ccb;
-  --color-purple-700: #622c98;
-  --color-purple-800: #421e66;
-  --color-purple-900: #251139;
-  --color-magenta-100: #ffebf9;
-  --color-magenta-200: #ffc0ec;
-  --color-magenta-300: #ff8fde;
-  --color-magenta-400: #ff53cc;
-  --color-magenta-500: #eb00a5;
-  --color-magenta-600: #bd0084;
-  --color-magenta-700: #8e0064;
-  --color-magenta-800: #630045;
-  --color-magenta-900: #3b002a;
-  --color-red-100: #ffecea;
-  --color-red-200: #ffc4be;
-  --color-red-300: #ff9990;
-  --color-red-400: #ff6759;
-  --color-red-500: #f81400;
-  --color-red-600: #c71000;
-  --color-red-700: #950c00;
-  --color-red-800: #670800;
-  --color-red-900: #3c0500;
-  --color-orange-100: #ffeddc;
-  --color-orange-200: #ffc895;
-  --color-orange-300: #ff9e43;
-  --color-orange-400: #f37500;
-  --color-orange-500: #c76000;
-  --color-orange-600: #9e4c00;
-  --color-orange-700: #753800;
-  --color-orange-800: #4f2600;
-  --color-orange-900: #2d1500;
-  --color-yellow-100: #fff48e;
-  --color-yellow-200: #ebd400;
-  --color-yellow-300: #cab600;
-  --color-yellow-400: #ab9a00;
-  --color-yellow-500: #8c7e00;
-  --color-yellow-600: #6e6400;
-  --color-yellow-700: #514a00;
-  --color-yellow-800: #373100;
-  --color-yellow-900: #1e1b00;
 
   /* named colors */
-  --color-light-base: 255 255 255;
-  --color-dark-base: 0 0 0;
-  --color-light: rgb(255 255 255);
-  --color-dark: rgb(0 0 0);
-  --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(var(--color-gray-900), var(--color-gray-100));
-  --color-brand: var(--color-purple-500);
-  --color-accent: light-dark(var(--color-magenta-600), var(--color-magenta-500));
-  --color-background: light-dark(var(--color-light), var(--color-dark));
-  --color-shaded: light-dark(#f9f9f9, #111);
+  --color-light: #fff;
+  --color-dark: #000;
+  --color-text: var(--color-dark);
+  --color-link: var(--color-brand-blue);
+  --color-brand: var(--color-brand-blue);
+  --color-accent: var(--color-mint-green);
+  --color-background: var(--color-light);
+  --color-shaded: #f9f9f9;
 
   /* fonts */
-  --font-family: montserrat, "Trebuchet MS", sans-serif;
+  --font-family: "MaisonNeue", maisonneue-fallback, arial, sans-serif;
+  --heading-font-family: var(--font-family);
 
-  /* headings */
-  --heading-font-size-xxl: 32.44px;
-  --heading-font-size-xl: 28.83px;
-  --heading-font-size-l: 25.63px;
-  --heading-font-size-m: 22.78px;
-  --heading-font-size-s: 20.25px;
+  /* headings - mapped from CenturyLink responsive font classes */
+  --heading-font-size-xxl: 40px;
+  --heading-font-size-xl: 36px;
+  --heading-font-size-l: 28px;
+  --heading-font-size-m: 22px;
+  --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
-  --heading-line-height: 1.15;
+  --heading-line-height: 1.1;
+  --heading-color: var(--color-brand-blue);
 
   /* body */
   --body-font-size-xxxl: 25px;
@@ -186,19 +71,53 @@
   --body-font-size-m: 16px;
   --body-font-size-s: 14px;
   --body-font-size-xs: 12px;
-  --body-line-height: 1.6;
+  --body-line-height: 1.25;
+
+  /* buttons */
+  --button-bg: var(--color-mint-green);
+  --button-color: var(--color-dark);
+  --button-border: 2px solid var(--color-mint-green);
+  --button-padding: 10px 24px;
+  --button-border-radius: 0;
+  --button-font-weight: 400;
+  --button-transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+  /* links */
+  --link-transition: color 0.2s ease;
+
+  /* section spacing */
+  --section-padding: 40px 0;
 
   /* misc */
   --header-height: 64px;
   --breadcrumb-height: 24px;
 }
 
-.light-scheme {
-  color-scheme: light;
+/* responsive typography */
+@media (width < 900px) {
+  :root {
+    --heading-font-size-xxl: 34px;
+    --heading-font-size-xl: 30px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 18px;
+    --heading-font-size-xs: 16px;
+    --body-font-size-m: 14px;
+    --body-font-size-s: 12px;
+  }
 }
 
-.dark-scheme {
-  color-scheme: dark;
+@media (width < 600px) {
+  :root {
+    --heading-font-size-xxl: 30px;
+    --heading-font-size-xl: 24px;
+    --heading-font-size-l: 22px;
+    --heading-font-size-m: 18px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 14px;
+    --body-font-size-m: 12px;
+    --body-font-size-s: 12px;
+  }
 }
 
 html {
@@ -231,67 +150,123 @@ header {
   position: fixed;
 }
 
+/* links */
 a {
   color: var(--color-link);
+  transition: var(--link-transition);
 
+  &:hover {
+    color: var(--color-brand-blue-light);
+  }
+
+  /* button base styles */
   &.btn {
     display: inline-block;
     line-height: 1;
-    font-weight: 500;
+    font-weight: var(--button-font-weight);
     text-decoration: none;
-    border: 2px solid;
-    padding: 8px 12px;
+    border: var(--button-border);
+    padding: var(--button-padding);
+    border-radius: var(--button-border-radius);
     box-sizing: border-box;
+    transition: var(--button-transition);
 
     &.btn-outline {
       background: transparent;
     }
   }
 
+  /* primary CTA - mint green with black text (CenturyLink main button) */
   &.btn-accent {
-    color: #fff;
-    background: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    color: var(--color-dark);
+    background: var(--color-mint-green);
+    border: 2px solid var(--color-mint-green);
+
+    &:hover {
+      background: transparent;
+      color: var(--color-dark);
+    }
 
     &.btn-outline {
-      color: var(--color-accent);
+      color: var(--color-dark);
+      background: transparent;
+
+      &:hover {
+        background: var(--color-mint-green);
+      }
     }
   }
 
+  /* primary - dark text/bg */
   &.btn-primary {
     color: var(--color-background);
     background-color: var(--color-text);
 
+    &:hover {
+      background-color: var(--color-gray-800);
+    }
+
     &.btn-outline {
       color: var(--color-text);
       background: transparent;
+
+      &:hover {
+        background-color: var(--color-text);
+        color: var(--color-background);
+      }
     }
   }
 
+  /* secondary - brand blue */
   &.btn-secondary {
-    color: var(--color-background);
-    background-color: var(--color-gray-500);
-    border: 2px solid var(--color-gray-500);
+    color: var(--color-light);
+    background-color: var(--color-brand-blue);
+    border: 2px solid var(--color-brand-blue);
+
+    &:hover {
+      background-color: var(--color-brand-blue-light);
+      border-color: var(--color-brand-blue-light);
+    }
 
     &.btn-outline {
-      color: var(--color-gray-500);
+      color: var(--color-brand-blue);
+      background: transparent;
+
+      &:hover {
+        background-color: var(--color-brand-blue);
+        color: var(--color-light);
+      }
     }
   }
 
+  /* negative - red */
   &.btn-negative {
     color: #fff;
-    background-color: var(--color-red-600);
-    border: 2px solid var(--color-red-600);
+    background-color: #c71000;
+    border: 2px solid #c71000;
+
+    &:hover {
+      background: transparent;
+      color: #c71000;
+    }
 
     &.btn-outline {
-      color: var(--color-red-600);
+      color: #c71000;
     }
   }
+}
+
+/* button focus states for accessibility */
+a.btn:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-brand-blue);
+  outline-offset: 2px;
 }
 
 /* sections */
 .section {
   display: block;
+  padding: var(--section-padding);
 
   > .default-content {
     max-width: var(--grid-container-width);
@@ -299,12 +274,20 @@ a {
   }
 }
 
+/* section variants from page-templates.json */
+main > .section.grey {
+  background-color: var(--color-gray-section);
+}
+
+main > .section.green {
+  background-color: var(--color-gray-section);
+}
+
 main {
   ul,
   ol {
     padding-inline-start: 24px;
 
-    /* Reduce nested lists even further */
     ul,
     ol {
       padding-inline-start: 12px;
@@ -317,17 +300,20 @@ button {
 }
 
 li {
-  margin-block: 1em;
+  margin-block: 0.5em;
 }
 
+/* headings - CenturyLink brand blue */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-family: var(--heading-font-family);
+  font-weight: 400;
   line-height: var(--heading-line-height);
+  color: var(--color-heading, var(--heading-color));
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
@@ -338,7 +324,7 @@ h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
 
 strong {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 input,
@@ -357,12 +343,6 @@ svg {
   width: 20px;
   height: 20px;
 }
-
-/* @media (width >= 600px) {} */
-
-/* @media (width >= 900px) {} */
-
-/* @media (width >= 1200px) {} */
 
 @media (width >= 1440px) {
   :root {

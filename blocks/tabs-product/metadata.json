@@ -1,0 +1,38 @@
+{
+  "variantName": "tabs-product",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-03-06T01:16:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.centurylink.com/home.html",
+    "originPage": "CenturyLink homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-categories",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "tab-labels + tab-content-panels",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product category navigation",
+      "service category tabs",
+      "content organized by product type"
+    ],
+    "notSuitableFor": [
+      "FAQ content",
+      "single-tab layouts"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["content/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-03-06T01:16:00.000Z"
+  }
+}

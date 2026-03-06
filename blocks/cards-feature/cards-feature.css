@@ -1,0 +1,81 @@
+/* Cards Feature Block - CenturyLink feature highlight cards */
+
+.cards-feature > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+}
+
+.cards-feature > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--spacing-l);
+  background-color: transparent;
+  border: none;
+  padding: var(--spacing-m) 0;
+}
+
+.cards-feature .cards-feature-card-image {
+  flex: 0 0 60px;
+  line-height: 0;
+}
+
+.cards-feature > ul > li img {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.cards-feature .cards-feature-card-body {
+  flex: 1;
+  margin: 0;
+}
+
+.cards-feature .cards-feature-card-body p {
+  margin: 0 0 4px;
+  font-size: var(--body-font-size-m);
+  color: var(--color-text);
+}
+
+.cards-feature .cards-feature-card-body strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+@media (width >= 600px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-xl);
+  }
+}
+
+@media (width >= 900px) {
+  .cards-feature > ul {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-l);
+  }
+
+  .cards-feature > ul > li {
+    flex-direction: column;
+    text-align: center;
+    padding: var(--spacing-l);
+  }
+
+  .cards-feature .cards-feature-card-image {
+    flex: 0 0 auto;
+  }
+
+  .cards-feature > ul > li img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .cards-feature .cards-feature-card-body p {
+    font-size: var(--body-font-size-s);
+  }
+}

@@ -1,0 +1,111 @@
+/* Hero Speed Block - CenturyLink homepage hero */
+
+.hero-speed-container .hero-speed-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-speed {
+  position: relative;
+  padding: 60px 24px 40px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #1a2b4a;
+}
+
+.hero-speed > div:first-child {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-speed h1 {
+  color: var(--color-light);
+  font-size: var(--heading-font-size-xxl);
+  line-height: var(--heading-line-height);
+  margin: 0 0 var(--spacing-m);
+  max-width: 500px;
+}
+
+.hero-speed h2,
+.hero-speed h3,
+.hero-speed h4,
+.hero-speed h5,
+.hero-speed h6 {
+  color: var(--color-light);
+}
+
+.hero-speed p,
+.hero-speed > div:first-child > div:last-child {
+  color: var(--color-light);
+  font-size: var(--body-font-size-l);
+  max-width: 500px;
+}
+
+.hero-speed.no-image {
+  background-color: var(--color-light);
+}
+
+.hero-speed.no-image * {
+  color: var(--color-text);
+}
+
+.hero-speed.no-image h1,
+.hero-speed.no-image h2 {
+  color: var(--color-brand-blue);
+}
+
+.hero-speed picture {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-speed picture::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgb(0 30 80 / 85%) 30%, rgb(0 30 80 / 40%) 70%, transparent);
+}
+
+.hero-speed img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-speed a {
+  color: var(--color-mint-green);
+}
+
+.hero-speed a.btn,
+.hero-speed a.btn-accent {
+  color: var(--color-dark);
+  background: var(--color-mint-green);
+  border-color: var(--color-mint-green);
+}
+
+@media (width >= 600px) {
+  .hero-speed {
+    padding: 60px 32px;
+    min-height: 400px;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-speed {
+    padding: 80px 32px;
+    min-height: 450px;
+  }
+
+  .hero-speed h1 {
+    max-width: 600px;
+  }
+}

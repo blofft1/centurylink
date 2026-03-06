@@ -1,0 +1,128 @@
+/* Tabs Product Block - CenturyLink product tabs */
+
+.tabs-product {
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
+}
+
+/* Tab list - horizontal, underline-style */
+.tabs-product .tabs-product-list {
+  display: flex;
+  gap: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: 0;
+}
+
+/* Tab buttons */
+.tabs-product .tabs-product-list button {
+  position: relative;
+  flex: 0 0 max-content;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: var(--color-text);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.tabs-product .tabs-product-list button::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+}
+
+.tabs-product .tabs-product-list button:hover {
+  color: var(--color-brand-blue-light);
+}
+
+.tabs-product .tabs-product-list button p {
+  margin: 0;
+}
+
+/* Active tab - blue text with blue underline */
+.tabs-product .tabs-product-list button[aria-selected='true'] {
+  color: var(--color-brand-blue-light);
+  font-weight: 700;
+  background-color: transparent;
+  cursor: default;
+}
+
+.tabs-product .tabs-product-list button[aria-selected='true']::after {
+  background-color: var(--color-brand-blue-light);
+}
+
+/* Tab panels */
+.tabs-product .tabs-product-panel {
+  padding: var(--spacing-xl) 0;
+  border: none;
+  overflow: visible;
+}
+
+.tabs-product .tabs-product-panel[aria-hidden='true'] {
+  display: none;
+}
+
+/* Two-column layout inside tab panels */
+.tabs-product .tabs-product-panel > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.tabs-product .tabs-product-panel h2 {
+  color: var(--color-brand-blue);
+  margin-top: 0;
+}
+
+.tabs-product .tabs-product-panel p {
+  line-height: 1.5;
+}
+
+/* CTA links inside tabs */
+.tabs-product .tabs-product-panel a:not([href=""]) {
+  color: var(--color-brand-blue);
+}
+
+/* Images in tab panels */
+.tabs-product .tabs-product-panel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+@media (width >= 600px) {
+  .tabs-product .tabs-product-list button {
+    font-size: var(--body-font-size-m);
+    padding: 10px 20px;
+  }
+}
+
+@media (width >= 900px) {
+  .tabs-product .tabs-product-list button {
+    font-size: var(--body-font-size-m);
+    padding: 10px 24px;
+  }
+
+  .tabs-product .tabs-product-panel > div {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tabs-product .tabs-product-panel > div > * {
+    flex: 1;
+  }
+}

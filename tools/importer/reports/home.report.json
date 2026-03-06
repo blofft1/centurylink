@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.centurylink.com/home.html",
+  "path": "home",
+  "timestamp": "2026-03-06T01:36:27.403Z",
+  "title": "Residential Services: Home Internet, TV, & Phone | CenturyLink",
+  "template": "homepage",
+  "blocks": [
+    "hero-speed",
+    "tabs-product",
+    "cards-feature",
+    "columns-compare",
+    "columns-promo",
+    "columns-promo"
+  ]
+}
